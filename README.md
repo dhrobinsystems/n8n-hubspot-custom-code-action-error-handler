@@ -44,6 +44,8 @@ This framework adds:
 
 ## Architecture overview
 
+![n8n HubSpot Custom Code Action Error Handler Workflow](assets/n8n-workflow-overview.png)
+
 ```mermaid
 flowchart LR
     subgraph HubSpot
