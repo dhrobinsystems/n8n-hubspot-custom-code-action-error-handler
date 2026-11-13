@@ -1,0 +1,209 @@
+{
+  "_comment": "Synthetic error reports as sent by hubspot/custom-code-wrapper.js or a HubSpot 'Send a webhook' action. Portal, workflow and record IDs are fictitious.",
+  "rate_limit": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Assign owner by territory",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "CONTACT",
+      "objectId": "501"
+    },
+    "attempt": 0,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "AxiosError",
+      "message": "Request failed with status code 429",
+      "code": "ERR_BAD_REQUEST",
+      "statusCode": 429,
+      "stack": "AxiosError: Request failed with status code 429\n    at settle (/opt/nodejs/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/opt/nodejs/node_modules/axios/lib/adapters/http.js:589:11)\n    at IncomingMessage.emit (node:events:531:35)\n    at async runAction (/var/task/file.js:17:22)\n    at async exports.main (/var/task/file.js:88:32)",
+      "response": {
+        "status": 429,
+        "data": {
+          "status": "error",
+          "message": "You have reached your secondly limit.",
+          "errorType": "RATE_LIMIT",
+          "correlationId": "aaaaaaaa-1111-4222-8333-444444444444",
+          "policyName": "SECONDLY",
+          "category": "RATE_LIMITS"
+        }
+      }
+    }
+  },
+  "type_error": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Calculate renewal date",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "DEAL",
+      "objectId": "9001"
+    },
+    "attempt": 0,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'closedate')",
+      "stack": "TypeError: Cannot read properties of undefined (reading 'closedate')\n    at calculateRenewal (/var/task/file.js:42:31)\n    at runAction (/var/task/file.js:60:10)\n    at exports.main (/var/task/file.js:88:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+    }
+  },
+  "validation": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Sync industry",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "0-2",
+      "objectId": "7001"
+    },
+    "attempt": 0,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "AxiosError",
+      "message": "Request failed with status code 400",
+      "statusCode": 400,
+      "stack": "AxiosError: Request failed with status code 400\n    at settle (/opt/nodejs/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/opt/nodejs/node_modules/axios/lib/adapters/http.js:589:11)\n    at IncomingMessage.emit (node:events:531:35)\n    at async runAction (/var/task/file.js:25:22)\n    at async exports.main (/var/task/file.js:88:32)",
+      "response": {
+        "status": 400,
+        "data": {
+          "status": "error",
+          "message": "Property values were not valid: [{\"isValid\":false,\"message\":\"Synthetic Value was not one of the allowed options\",\"name\":\"industry\"}]",
+          "correlationId": "bbbbbbbb-1111-4222-8333-444444444444",
+          "category": "VALIDATION_ERROR"
+        }
+      }
+    }
+  },
+  "timeout_exhausted": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Enrich ticket",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "TICKET",
+      "objectId": "3301"
+    },
+    "attempt": 3,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "Error",
+      "message": "Task timed out after 20.02 seconds"
+    }
+  },
+  "auth": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Assign owner by territory",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "CONTACT",
+      "objectId": "501"
+    },
+    "attempt": 0,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "AxiosError",
+      "message": "Request failed with status code 401",
+      "statusCode": 401,
+      "stack": "AxiosError: Request failed with status code 401\n    at settle (/opt/nodejs/node_modules/axios/lib/core/settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (/opt/nodejs/node_modules/axios/lib/adapters/http.js:589:11)\n    at IncomingMessage.emit (node:events:531:35)\n    at async runAction (/var/task/file.js:12:22)\n    at async exports.main (/var/task/file.js:88:32)",
+      "response": {
+        "status": 401,
+        "data": {
+          "status": "error",
+          "message": "Authentication credentials not found. Bearer pat-na1-SYNTHETIC-TEST-TOKEN was rejected for ops@example.com",
+          "category": "INVALID_AUTHENTICATION",
+          "correlationId": "cccccccc-1111-4222-8333-444444444444"
+        }
+      }
+    }
+  },
+  "network": {
+    "source": "hubspot-custom-code",
+    "portalId": "12345678",
+    "workflowId": "900001",
+    "workflowName": "Synthetic Lead Routing",
+    "actionName": "Assign owner by territory",
+    "actionId": "1000099",
+    "callbackId": "ap-000-111-222",
+    "object": {
+      "objectType": "CONTACT",
+      "objectId": "501"
+    },
+    "attempt": 0,
+    "occurredAt": "2026-06-01T08:00:00.000Z",
+    "inputFields": {
+      "email": "[omitted]",
+      "cca_retry_count": "[omitted]"
+    },
+    "error": {
+      "name": "Error",
+      "message": "socket hang up",
+      "code": "ECONNRESET"
+    }
+  },
+  "no_record": {
+    "source": "hubspot-custom-code",
+    "workflowId": "900002",
+    "actionName": "Nightly cleanup",
+    "error": {
+      "name": "Error",
+      "message": "Unexpected upstream response"
+    }
+  },
+  "send_a_webhook_flat": {
+    "objectId": 601,
+    "objectType": "CONTACT",
+    "portalId": 12345678,
+    "properties": {
+      "hs_object_id": {
+        "value": "601"
+      },
+      "cca_error_message": {
+        "value": "Request failed with status code 503"
+      },
+      "cca_error_status_code": {
+        "value": "503"
+      },
+      "cca_retry_count": {
+        "value": "1"
+      }
+    },
+    "workflow_id": "900003",
+    "action_name": "Score lead"
+  }
+}
