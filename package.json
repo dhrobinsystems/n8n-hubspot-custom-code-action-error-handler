@@ -1,0 +1,48 @@
+{
+  "name": "n8n-hubspot-custom-code-action-error-handler",
+  "version": "1.0.0",
+  "description": "Centralized n8n error handler for HubSpot workflow custom code actions: parses stack traces and API errors, alerts Slack, logs to Datadog or the console, and triggers retry or fallback protocols.",
+  "private": true,
+  "license": "MIT",
+  "author": "DH Robin (dhRobin Systems)",
+  "main": "error-parser.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-workflow.js",
+    "build:check": "node scripts/build-workflow.js --check",
+    "lint": "node --check error-parser.js && node --check scripts/build-workflow.js && node --check hubspot/custom-code-wrapper.js && node --check test/error-parser.test.js && node --check test/workflow.test.js && node -e \"JSON.parse(require('fs').readFileSync('workflow.json','utf8'))\"",
+    "test": "node --test test/error-parser.test.js test/workflow.test.js",
+    "test:security": "node --test --test-name-pattern=security test/workflow.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/error-parser.test.js test/workflow.test.js",
+    "ci": "npm run lint && npm run build:check && npm test"
+  },
+  "n8n": {
+    "minimumVersion": "1.0.0",
+    "nodesUsed": [
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.wait"
+    ],
+    "requiredEnvironment": {
+      "N8N_BLOCK_ENV_ACCESS_IN_NODE": "false"
+    },
+    "codeNodeExternalModules": []
+  },
+  "keywords": [
+    "n8n",
+    "hubspot",
+    "custom-code-actions",
+    "error-handling",
+    "observability",
+    "datadog",
+    "slack",
+    "revops"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
